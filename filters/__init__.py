@@ -1,6 +1,7 @@
 from aiogram import Dispatcher
 
 from loader import dp
+from . import filters_generator
 # from .is_admin import AdminFilter
 
 

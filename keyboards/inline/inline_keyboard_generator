@@ -1,0 +1,8 @@
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+
+def create_inline_keyboard(text: str | list[str]):
+    if isinstance(text, str):
+        return InlineKeyboardMarkup(inline_keyboard=[InlineKeyboardButton(text=text, callback_data=text)])
+    else:
+        return InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text=i) for i in text]])
